@@ -21,7 +21,7 @@ hard_disk2=$hard_disk"2"
 hard_disk3=$hard_disk"3"
 
 
-mkfs.ext4 $hard_disk
+#mkfs.ext4 $hard_disk
 echo "####################################################################"
 echo $hard_disk "formated !                                              #"
 echo "####################################################################"

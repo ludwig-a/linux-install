@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "#################################################"
-echo "Welcome to own archinstall !                    #"
+echo "Welcome to my own linux installer !             #"
 echo "#################################################"
 echo
 
