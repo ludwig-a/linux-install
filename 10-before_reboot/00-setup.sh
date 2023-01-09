@@ -7,7 +7,7 @@ echo
 echo "####################################################################"
 echo "STEP 1 : set up my hard drive."
 echo "For that, run the appropriate script with the right arguments number"
-cd /root/linux-install/10-before_reboot
+cd "/root/linux-install/10-before_reboot/"
 echo
 echo "####################################################################"
 echo "STEP 2 :"

@@ -1,7 +1,5 @@
 #!/bin/sh
 
-arch-chroot /mnt
-
 # basics
 pacman -S base-devel intel-ucode polkit 
 
