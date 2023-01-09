@@ -10,6 +10,10 @@ hard_disk="/dev/sda"
 fdisk $hard_disk
 
 mkfs.ext4 $hard_disk
+echo "####################################################################"
+echo $hard_disk "formated !                                              #"
+echo "####################################################################"
+
 fdisk $hard_disk << EOF
 g
 w
