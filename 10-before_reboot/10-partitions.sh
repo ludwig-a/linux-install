@@ -7,8 +7,6 @@ echo "Default partitions size : 1 = 500M, 2 = 2 * RAM = 17G, 3 = size of th rest
 hard_disk="/dev/sda"
 #hard_disk="/dev/sdb"
 
-fdisk $hard_disk
-
 mkfs.ext4 $hard_disk
 echo "####################################################################"
 echo $hard_disk "formated !                                              #"
