@@ -21,7 +21,7 @@ hard_disk2=$hard_disk"2"
 hard_disk3=$hard_disk"3"
 
 
-#mkfs.ext4 $hard_disk
+mkfs.ext4 $hard_disk
 echo "####################################################################"
 echo $hard_disk "formated !                                              #"
 echo "####################################################################"
@@ -53,6 +53,7 @@ n
 
 $3
 t
+2
 19
 w
 EOF
@@ -67,6 +68,7 @@ n
 
 $4
 t
+3
 20
 w
 EOF
