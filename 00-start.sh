@@ -8,7 +8,7 @@ echo
 nb=0
 while [ $nb -ne 1 ]; do
 	echo "#################################################"
-	echo "Choose what you want to do :                    #"
+	echo "Choose what you want to install :               #"
 	echo "#################################################"
 	echo
 	echo "1 - install Arch by Archinstall"

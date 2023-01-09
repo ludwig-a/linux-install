@@ -1,3 +1,14 @@
 #!/bin/sh
 
-echo "Inside this folder, run all the script in order. So, start with 10-partitions.sh."
+echo "####################################################################"
+echo "Inside this folder, run all the script in order."
+echo "####################################################################"
+echo
+echo "####################################################################"
+echo "STEP 1 : set up my hard drive."
+echo
+echo "For that, run the appropriate script with the right arguments number"
+echo "####################################################################"
+echo
+echo "####################################################################"
+echo "STEP 2 :"
