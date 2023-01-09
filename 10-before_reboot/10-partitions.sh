@@ -39,9 +39,9 @@ while [ $nb -ne 1 ]; do
 	esac
 done
 
-hard_disk1=$hard_disk"1"
-hard_disk2=$hard_disk"2"
-hard_disk3=$hard_disk"3"
+#hard_disk1=$hard_disk"1"
+#hard_disk2=$hard_disk"2"
+#hard_disk3=$hard_disk"3"
 
 fdisk $hard_disk
 
@@ -90,19 +90,19 @@ EOF
 
 #########################################################################################
 
-mkfs.fat -F32 $hard_disk1
-mkswap $hard_disk2
-swapon $hard_disk2
-mkfs.ext4 $hard_disk3
+#mkfs.fat -F32 $hard_disk1
+#mkswap $hard_disk2
+#swapon $hard_disk2
+#mkfs.ext4 $hard_disk3
 
 #########################################################################################
 
-mount /dev/sda3 /mnt
+#mount /dev/sda3 /mnt
 
 #########################################################################################
 
-mkdir /mnt/etc
-genfstab -U /mnt >> /mnt/etc/fstab
+#mkdir /mnt/etc
+#genfstab -U /mnt >> /mnt/etc/fstab
 
 #########################################################################################
 
