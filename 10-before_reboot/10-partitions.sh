@@ -2,10 +2,16 @@
 
 echo "We are going to create a partition table. Then, we will format partitions"
 echo "We will create 3 partitions ; for booting, for swap and for the rest"
-echo "Default partitions size : 1 = 500M, 2 = 2 * RAM = 17G, 3 = size of th rest"
+echo "1 argument = boot partition"
+echo "2 argument = swap partition"
+echo "3 argument = rest partition"
 
 hard_disk="/dev/sda"
 #hard_disk="/dev/sdb"
+
+$1=partition_boot_size
+$2=partition_swap_size
+$3=partition_rest_size
 
 mkfs.ext4 $hard_disk
 echo "####################################################################"
@@ -21,7 +27,7 @@ fdisk $hard_disk << EOF
 n
 1
 
-+500M
+$partition_boot_size
 t
 1
 w
@@ -32,7 +38,7 @@ fdisk $hard_disk << EOF
 n
 2
 
-+17G
+$partition_swap_size
 t
 19
 w
@@ -42,7 +48,7 @@ fdisk $hard_disk << EOF
 n
 3
 
-
+$partition_rest_size
 t
 20
 w
