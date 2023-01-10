@@ -10,69 +10,71 @@ script7="./10-before_reboot/70-sudo-config.sh"
 script8="./10-before_reboot/80-reboot.sh"
 
 nb=1
-#while [ $? -eq 0 ]; do
-	if [ nb == 1 ] ; then
-		nb=2
+while [ $? -eq 0 ]; do
+	if [ $nb == 1 ] ; then
 		$script1 sda +500M +1G +4G
 	else
 		echo "problem with $script1"
 		exit 1
 	fi
 
-	if [ nb == 2 ] ; then 
-		nb=3
+	$nb=2
+	if [ $nb == 2 ] ; then 
+		$nb=3
 		$script2
 	else
 		echo "problem with $script2"
 		exit 1
 	fi
 
-	if [ nb == 3 ] ; then
-		nb=4
+	$nb=3
+	if [ $nb == 3 ] ; then
 		$script3
 	else
 		echo "problem with $script3"
 		exit 1
 	fi
 
-	if [ nb == 4 ] ; then 
-		nb=5
+	$nb=4
+	if [ $nb == 4 ] ; then 
 		$script4
 	else
 		echo "problem with $script4"
 		exit 1
 	fi
 
-	if [ nb == 5 ] ; then 
-		nb=6
+	$nb=5
+	if [ $nb == 5 ] ; then 
 		$script5
 	else
 		echo "problem with $script5"
 		exit 1
 	fi
 
-	if [ nb == 6 ] ; then
-		nb=7
+	$nb=6
+	if [ $nb == 6 ] ; then
 		$script6
 	else
 		echo "problem with $script6"
 		exit 1
 	fi
 
-	if [ nb == 7 ] ; then
-		nb=8
+	$nb=7
+	if [ $nb == 7 ] ; then
 		$script7
 	else
 		echo "problem with $script7"
 		exit 1
 	fi
 
-	if [ nb == 8 ] ; then
-		nb=9
+	$nb=8
+	if [ $nb == 8 ] ; then
 		$script8
 	else
 		echo "problem with $script8"
 		exit 1
 	fi
+
 	exit 0
-#done
+
+done
