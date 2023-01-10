@@ -1,21 +1,33 @@
 #!/bin/sh
 
+package_manager="pacman -S --noconfirm"
+#package_manager="pacman -S
+
+cd
+$package_manager git
+git clone https:github.com/ludwig-a/linux-install
+cd linux-install
+
 # basics
-pacman -S base-devel intel-ucode polkit 
+$package_manager base-devel intel-ucode polkit 
 
 # grub
-pacman -S grub efibootmgr dosfstools os-prober mtools
+$package_manager grub efibootmgr dosfstools os-prober mtools
 
 # security
-pacman -S ufw
+$package_manager ufw
 
 # network
-pacman -S networkmanager wpa_supplicant wireless_tools netctl dialog
+$package_manager networkmanager wpa_supplicant wireless_tools netctl dialog
 systemctl enable NetworkManager
 
 # usb
-pacman -S usb_modeswitch usbmuxd usbutils 
+$package_manager usb_modeswitch usbmuxd usbutils 
 #libusb-compat
 
 # others
-pacman -S vim git archiso
+$package_manager vim archiso
+
+echo "###################################################"
+echo "Now run 40-grub_config.sh                         #"
+echo "###################################################"
