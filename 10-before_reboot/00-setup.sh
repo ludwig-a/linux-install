@@ -1,13 +1,13 @@
 #!/bin/sh
 
-script1="./10-partitions.sh"
-script2="./20-kernel_install.sh"
-script3="./30-basics_install.sh"
-script4="./40-grub_config.sh"
-script5="./50-hosts-hostname.sh"
-script6="./60-user-passwd.sh"
-script7="./70-sudo-config.sh"
-script8="./80-reboot.sh"
+script1="./10-before_reboot/10-partitions.sh"
+script2="./10-before_reboot/20-kernel_install.sh"
+script3="./10-before_reboot/30-basics_install.sh"
+script4="./10-before_reboot/40-grub_config.sh"
+script5="./10-before_reboot/50-hosts-hostname.sh"
+script6="./10-before_reboot/60-user-passwd.sh"
+script7="./10-before_reboot/70-sudo-config.sh"
+script8="./10-before_reboot/80-reboot.sh"
 
 nb=1
 while [ $? -eq 0 ]; do

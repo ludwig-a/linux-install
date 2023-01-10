@@ -24,7 +24,7 @@ while [ $nb -ne 1 ]; do
 	read distro;
 
 	case $distro in
-		1) ./10-before_reboot/00-setup.sh ;;
+		1) ./10-before_reboot/00-setup.sh && exit ;;
 		2) echo "not yet implemented.";;
 		3) echo "not yet implemented.";;
 		4) echo "not yet implemented.";;
