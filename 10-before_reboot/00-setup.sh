@@ -15,7 +15,7 @@ nb=1
 while [ $? -eq 0 ]; do
 	if [ nb == 1 ] ; then
 		nb=2
-		./$script1
+		./$script1 sda +500M +1G +4G
 	else
 		echo "problem with $script1"
 		exit 1
