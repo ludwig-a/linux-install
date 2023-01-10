@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#pacman-key --refresh-keys
+pacman-key --refresh-keys
 pacstrap -K /mnt base linux linux-headers linux-firmware linux-atm
 arch-chroot /mnt
 
