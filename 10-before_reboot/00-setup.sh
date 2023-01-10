@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd "/linux-install/10-before_reboot/"
+cd "/root/linux-install/10-before_reboot/"
 
 script1="10-partitions.sh"
 script2="20-kernel_install.sh"
@@ -13,7 +13,7 @@ script8="80-reboot.sh"
 
 nb=1
 while [ $? -eq 0 ]; do
-	if [ nb -eq 1 ] ; then
+	if [ nb == 1 ] ; then
 		nb=2
 		./$script1
 	else
@@ -21,7 +21,7 @@ while [ $? -eq 0 ]; do
 		exit 1
 	fi
 
-	if [ nb -eq 2 ] ; then 
+	if [ nb == 2 ] ; then 
 		nb=3
 		./$script2
 	else
@@ -29,7 +29,7 @@ while [ $? -eq 0 ]; do
 		exit 1
 	fi
 
-	if [ nb -eq 3 ] ; then
+	if [ nb == 3 ] ; then
 		nb=4
 		./$script3
 	else
@@ -37,7 +37,7 @@ while [ $? -eq 0 ]; do
 		exit 1
 	fi
 
-	if [ nb -eq 4 ] ; then 
+	if [ nb == 4 ] ; then 
 		nb=5
 		./$script4
 	else
@@ -45,7 +45,7 @@ while [ $? -eq 0 ]; do
 		exit 1
 	fi
 
-	if [ nb -eq 5 ] ; then 
+	if [ nb == 5 ] ; then 
 		nb=6
 		./$script5
 	else
@@ -53,7 +53,7 @@ while [ $? -eq 0 ]; do
 		exit 1
 	fi
 
-	if [ nb -eq 6 ] ; then
+	if [ nb == 6 ] ; then
 		nb=7
 		./$script6
 	else
@@ -61,7 +61,7 @@ while [ $? -eq 0 ]; do
 		exit 1
 	fi
 
-	if [ nb -eq 7 ] ; then
+	if [ nb == 7 ] ; then
 		nb=8
 		./$script7
 	else
@@ -69,7 +69,7 @@ while [ $? -eq 0 ]; do
 		exit 1
 	fi
 
-	if [ nb -eq 8 ] ; then
+	if [ nb == 8 ] ; then
 		nb=9
 		./$script8
 	else
