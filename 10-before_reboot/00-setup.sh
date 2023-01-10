@@ -1,15 +1,16 @@
 #!/bin/sh
 
 script1="./10-before_reboot/10-partitions.sh"
-script2="./10-before_reboot/20-kernel_install.sh"
-script3="./10-before_reboot/30-basics_install.sh"
-script4="./10-before_reboot/40-grub_config.sh"
-script5="./10-before_reboot/50-hosts-hostname.sh"
-script6="./10-before_reboot/60-user-passwd.sh"
-script7="./10-before_reboot/70-sudo-config.sh"
-script8="./10-before_reboot/80-reboot.sh"
+script2="./10-before_reboot/11-mirrorlist.sh"
+script3="./10-before_reboot/20-kernel_install.sh"
+script4="./10-before_reboot/30-basics_install.sh"
+script5="./10-before_reboot/40-grub_config.sh"
+script6="./10-before_reboot/50-hosts-hostname.sh"
+script7="./10-before_reboot/60-user-passwd.sh"
+script8="./10-before_reboot/70-sudo-config.sh"
+script9="./10-before_reboot/80-reboot.sh"
 
-while [ $? -eq 0 ]; do
+#while [ $? -eq 0 ]; do
 	nb=1
 	if [ $nb == 1 ] ; then
 		$script1 sda +500M +1G +4G
@@ -73,4 +74,12 @@ while [ $? -eq 0 ]; do
 		echo "problem with $script8"
 		exit 1
 	fi
-done
+
+	nb=9
+	if [ $nb == 9 ] ; then
+		$script9
+	else
+		echo "problem with $script9"
+		exit 1
+	fi
+#done
