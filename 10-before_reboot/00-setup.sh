@@ -73,7 +73,4 @@ while [ $? -eq 0 ]; do
 		echo "problem with $script8"
 		exit 1
 	fi
-
-	exit 0
-
 done
