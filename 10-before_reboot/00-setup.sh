@@ -10,7 +10,7 @@ script7="./10-before_reboot/70-sudo-config.sh"
 script8="./10-before_reboot/80-reboot.sh"
 
 nb=1
-while [ $? -eq 0 ]; do
+#while [ $? -eq 0 ]; do
 	if [ nb == 1 ] ; then
 		nb=2
 		$script1 sda +500M +1G +4G
@@ -75,4 +75,4 @@ while [ $? -eq 0 ]; do
 		exit 1
 	fi
 	exit 0
-done
+#done
