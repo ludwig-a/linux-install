@@ -3,11 +3,6 @@
 package_manager="pacman -S --noconfirm"
 #package_manager="pacman -S
 
-cd
-$package_manager git
-git clone https:github.com/ludwig-a/linux-install
-cd linux-install
-
 # basics
 $package_manager base-devel intel-ucode polkit 
 
